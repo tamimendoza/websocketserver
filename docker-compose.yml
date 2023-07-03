@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  db-chats:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    container_name: db-chats
+    environment:
+        MONGO_INITDB_DATABASE: admin
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: root
